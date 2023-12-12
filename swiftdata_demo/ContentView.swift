@@ -25,6 +25,12 @@ struct ContentView: View {
                         // context.save() -> if autosave is disabled 
                     }
                 }
+                .swipeActions {
+                    Button("Delete") {
+                        // Delete an item from DB
+                        context.delete(item)
+                    }
+                }
             }
             
             Button("Add") {
