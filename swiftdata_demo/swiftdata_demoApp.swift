@@ -13,7 +13,7 @@ struct swiftdata_demoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: DataItem.self)
+                .modelContainer(for: DataItem.self, isAutosaveEnabled: true)
         }
     }
 }

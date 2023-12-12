@@ -17,7 +17,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(items) { item in
-                Text(item.creationDate.description)
+                HStack {
+                    Text(item.creationDate.description)
+                    Spacer()
+                    Button("Update") {
+                        item.creationDate = Date()
+                        // context.save() -> if autosave is disabled 
+                    }
+                }
             }
             
             Button("Add") {
